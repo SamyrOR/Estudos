@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/border-radius.css">
+    </head>
+    <body>
+        <form class="values">
+            <p>
+                <label for="all">All Sides</label>
+                <input id="all" type="number" value="0" onchange="change(allSide)" onkeyup="change(allSide)">
+            </p>
+            <p>
+                <label for="tl">Top left:</label>
+                <input id="tl" type="number" name="tl" value="0" onchange="change(tL)" onkeyup="change(tL)"> 
+            </p>
+            <p>
+                <label for="top-right">Top right:</label>
+                <input id="tr" type="number" value="0" max="200" onchange="change(tR)" onkeyup="change(tR)">
+            </p>
+                <label for="bottom-right">Bottom right:</label>
+                <input id="br" type="number" value="0" onchange="change(bR)" onkeyup="change(bR)">
+            </p>
+            <p>
+               <label for="bottom-left">Bottom left:</label>
+                <input id="bl" type="number" value="0" onchange="change(bL)" onkeyup="change(bL)">
+            </p>
+        </form>
+        <textarea name="" id="textarea" cols="30" rows="10" value=""></textarea>
+        <button class="copy-button" onclick="textCopy()">Copy!</button>
+        <span id="border"></span>
+        <script type="text/javascript" src="assets/js/values.js"></script>
+    </body>
+</html>

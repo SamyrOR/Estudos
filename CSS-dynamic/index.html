@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CSS Dynamic Login</title>
+</head>
+<body>
+    <form>
+        <p>
+        <input type="text" name="username" id="username" placeholder="ID">
+        <span id="erroruser">Nome de usuário invalido!</span>
+        <br>
+        <input type="password" name="password" id="pw" placeholder="Password">
+        <span id="errorpw">Senha digitada invalida!</span>
+        </p>
+        <span id="spaces"> Por favor, verifique por espaços em brancos nos campos digitados</span>
+    </form>
+    <button id="cancel" onclick="limpar()">Cancel</button>
+    <button id="login" onclick="validar()">Login</button>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

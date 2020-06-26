@@ -1,0 +1,12 @@
+#pw{
+    border-top: none;
+}
+#erroruser,
+#errorpw,
+#spaces{
+    display: none;
+    border
+}
+:root{
+    --error-color:red
+}
