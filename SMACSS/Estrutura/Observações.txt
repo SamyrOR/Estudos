@@ -1,0 +1,13 @@
+Estrutura de pastas
+
+Convenções de nomeclatura
+
+• o-: objeto;
+• c-: componente;
+• u-: utilitário;
+• t-: tema;
+• s-: escopo (scope);
+• is-/has-: estado/ condição;
+• _ : hack (!);
+• js-: JavaScript;
+• qa-: quality assurance (QA).
