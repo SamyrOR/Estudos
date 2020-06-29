@@ -1,12 +1,21 @@
-#pw{
-    border-top: none;
+.container { 
+    text-align: center;
 }
-#erroruser,
-#errorpw,
-#spaces{
+.d-none {
     display: none;
-    border
 }
-:root{
-    --error-color:red
+.d-inline{
+    display: inline !important;
+}
+.d-flex {
+    display: flex;
+}
+.error { 
+    background-color: red;
+    font-weight: bold;
+    font-style: italic;
+    border-color: red;
+}
+.space-error{
+    background-color: yellow !important;
 }

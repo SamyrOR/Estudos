@@ -6,18 +6,30 @@
     <title>CSS Dynamic Login</title>
 </head>
 <body>
-    <form>
-        <p>
-        <input type="text" name="username" id="username" placeholder="ID">
-        <span id="erroruser">Nome de usuário invalido!</span>
-        <br>
-        <input type="password" name="password" id="pw" placeholder="Password">
-        <span id="errorpw">Senha digitada invalida!</span>
-        </p>
-        <span id="spaces"> Por favor, verifique por espaços em brancos nos campos digitados</span>
-    </form>
-    <button id="cancel" onclick="limpar()">Cancel</button>
-    <button id="login" onclick="validar()">Login</button>
+    <main class="container">
+        <h1>
+            Entrar
+        </h1>
+        <form>
+            <div >
+                <input type="text" name="username"  class="username" placeholder="ID">
+                <div>
+
+                    <span class="erroruser d-none">Nome de usuário invalido!</span>
+                </div>
+            </div>
+            <div >
+                <input type="password" name="password" class="pw"placeholder="Password">
+                <div>
+
+                    <span class="errorpw d-none">Senha digitada invalida!</span>
+                </div>
+            </div>
+            <span class="spaces d-none"> Por favor, verifique por espaços em brancos nos campos digitados</span>
+        </form>
+        <button id="login" onclick="validar()">Login</button>
+        <button id="cancel" onclick="limpar()">Cancel</button>
+    </main>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

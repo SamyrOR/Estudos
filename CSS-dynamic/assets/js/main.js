@@ -1,51 +1,52 @@
-let usuario = document.getElementById("username");
-let senha = document.getElementById("pw");
-let erroUser = document.getElementById("erroruser");
-let erroPw = document.getElementById("errorpw");
-let espacos = document.getElementById("spaces");
+let usuario = document.querySelector(".username");
+let senha = document.querySelector(".pw");
+let erroUser = document.querySelector(".erroruser");
+let erroPw = document.querySelector(".errorpw");
+let espacos = document.querySelector(".spaces");
 window.onload = () => {
     function spaceCheck(){
         let check = this.value
         if(check.indexOf(' ') >= 0){
-            this.style.backgroundColor = "yellow"
-            espacos.style.display = "inline"
+            this.classList.add('space-error')
+            espacos.classList.add('d-inline')
         }else {
-            this.style.backgroundColor = "white"
-            espacos.style.display = "none";
+            this.classList.remove('space-error')
+            espacos.classList.remove('d-inline')
         }
-        erroPw.style.display = "none";
-        erroUser.style.display = "none";
+        removeDisplay(erroUser, erroPw)
+        this.classList.remove('error')
+        
     }
-
     usuario.addEventListener("input",spaceCheck)
-    senha.addEventListener("input", spaceCheck)
+    senha.addEventListener("input",spaceCheck)
 }
+
 function validar (){
     if(usuario.value != "testuser"){
-        errorDisplay(usuario);
+        errorDisplay(usuario, erroUser);
     }
     if(senha.value != "password"){
-        errorDisplay(senha);
+        errorDisplay(senha, erroPw);
     }
 }
-function errorDisplay (campo){
-    campo.style.backgroundColor = "red";
-    campo.style.fontWeight = "bold";
-    campo.style.fontStyle = "italic";
-    campo.style.borderColor = "red";
-    if(campo == usuario){
-        erroUser.style.display = "inline";
-    }else {
-        erroPw.style.display = "inline";
-    }
+function errorDisplay (campo, campo2){
+    campo.classList.add('error')
+    campo2.classList.add('d-inline')
 }
 function limpar (){
-    usuario.style.backgroundColor = "white";
-    erroUser.style.display = "none";
-    senha.style.backgroundColor = "white";
-    erroPw.style.display = "none";
-    espacos.style.display= "none";
+    removeClass(usuario, senha)
+    removeDisplay(erroUser, erroPw, espacos )
     usuario.value = '';
     senha.value = '';
-    
+}
+
+function removeClass (...campos){
+    for ( let campo of campos) {
+        campo.classList.remove('error')
+    }
+}
+function removeDisplay (...campos) {
+    for ( let campo of campos) {
+        campo.classList.remove('d-inline')
+    }
 }
