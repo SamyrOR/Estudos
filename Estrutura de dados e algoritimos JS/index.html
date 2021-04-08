@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8" />
+    <title>Estrutura de dados</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h2>Estrutura de dados</h2>
+        <hr />
+        <section>
+          <h3>Stack (pilha)</h3>
+          <p>
+            A Estrutura stack se assemelha com uma pilha de livros,
+            <b>Last in First Out</b>, ou seja, o ultimo a ser adicionado é o
+            primeiro a sair quando iremos manipular tais dados.
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Size</li>
+            <li>Search</li>
+            <li>Insert</li>
+            <li>Delete</li>
+          </ul>
+          <a href="https://codepen.io/beaucarnes/pen/yMBGbR?editors=0012"
+            >Stack</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Sets</h3>
+          <p>
+            Sets são semelhantes a stack em <b>Last in First Out</b>, porem,
+            sets não aceitam dados duplicados
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Values</li>
+            <li>Has</li>
+            <li>Union</li>
+            <li>Intersection</li>
+            <li>Add</li>
+            <li>Remove</li>
+            <li>Subset</li>
+            <li>Diference</li>
+          </ul>
+          <a href="https://codepen.io/beaucarnes/pen/dvGeeq?editors=0012"
+            >Sets</a
+          >
+        </section>
+        <hr />
+
+        <section>
+          <h3>Queue (Fila)</h3>
+          <p>
+            Como o próprio nome ja da a entender, a estrutura do tipo fila, é
+            semelhante a uma fila, onde o primeiro dado a ser inserido é o
+            primeiro a ser retirado <b>First in First Out</b>
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Print</li>
+            <li>Size</li>
+            <li>Front</li>
+            <li>Queue</li>
+            <li>Dequeue</li>
+            <li>isEmpty</li>
+          </ul>
+          <h3>Priority Queue (Fila de prioridades)</h3>
+          <p>
+            É idêntica a estrutura queue, porem com o adicional que os itens da
+            fila terão peso (prioridade) em relação aos outros itens da fila
+          </p>
+          <a href="https://codepen.io/beaucarnes/pen/QpaQRG?editors=0012"
+            >Queue & Priority Queue</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Binary Tree Search (Pesquisa de Arvore Binária)</h3>
+          <p>
+            Na estrutura de dados tipo BST, temos 3 tipos diferentes de
+            nomenclaturas, o <b>root</b> que é o <b>node</b> principal da
+            estrutura, dele podemos ter nodes filhos e assim sucessivamente, um
+            node que tem nodes filhos é chamado de <b>parent node</b> ja os
+            nodes que não tem nodes filhos, é chamado de <b>leaf</b>, na arvore
+            binaria, cada node poderá apenas ter dois node filhos, com a
+            seguinte regra: o da direita sempre deve ser maior ou igual ao
+            parente node, e o da esquerda sempre menor ou igual o parent node.
+          </p>
+          <p>
+            Com <b>Transversal</b> e <b>Height</b> podemos identificar qual a
+            altura da nossa árvore, se ela está balanceada (tem o mesmo tamanho
+            entre os lados),e ordenar os dados por ordem de tamanho crescente
+            <b>inOrder()</b>, para ordenar os nodes por pelos nodes parents da
+            esquerda para direita temos a <b>preOrder()</b>, e para ordenar os
+            dados de baixo para cima, começando pelos leafs temos o
+            <b>postOrder()</b> que também começa da esquerda para direita, e por
+            ultimo temos o <b>levelOrder()</b> que ordena os dados pelo level da
+            camada da árvore.
+          </p>
+          <ul>
+            <li>Add</li>
+            <li>FindMin</li>
+            <li>FindMax</li>
+            <li>Find</li>
+            <li>IsPresent</li>
+            <li>IsBalanced</li>
+            <li>FindMinHeight</li>
+            <li>FindMaxHeight</li>
+            <li>InOrder</li>
+            <li>PreOrder</li>
+            <li>PostOrder</li>
+            <li>LevelOrder</li>
+          </ul>
+        </section>
+        <hr>
+        <section></section>
+      </article>
+    </main>
+  </body>
+</html>
