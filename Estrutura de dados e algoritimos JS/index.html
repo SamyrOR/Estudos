@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Estrutura de dados</title>
+    <style>
+      p {
+        width: 120ch;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h2>Estrutura de dados</h2>
+        <hr />
+        <section>
+          <h3>Stack (pilha)</h3>
+          <p>
+            A Estrutura stack se assemelha com uma pilha de livros,
+            <b>Last in First Out</b>, ou seja, o ultimo a ser adicionado é o
+            primeiro a sair quando iremos manipular tais dados.
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Size</li>
+            <li>Search</li>
+            <li>Insert</li>
+            <li>Delete</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/yMBGbR?editors=0012"
+            target="_blank"
+            >Stack</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Sets</h3>
+          <p>
+            Sets são semelhantes a stack em <b>Last in First Out</b>, porem,
+            sets não aceitam dados duplicados
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Values</li>
+            <li>Has</li>
+            <li>Union</li>
+            <li>Intersection</li>
+            <li>Add</li>
+            <li>Remove</li>
+            <li>Subset</li>
+            <li>Diference</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/dvGeeq?editors=0012"
+            target="_blank"
+            >Sets</a
+          >
+        </section>
+        <hr />
+
+        <section>
+          <h3>Queue (Fila)</h3>
+          <p>
+            Como o próprio nome ja da a entender, a estrutura do tipo fila, é
+            semelhante a uma fila, onde o primeiro dado a ser inserido é o
+            primeiro a ser retirado <b>First in First Out</b>
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Print</li>
+            <li>Size</li>
+            <li>Front</li>
+            <li>Queue</li>
+            <li>Dequeue</li>
+            <li>isEmpty</li>
+          </ul>
+          <h3>Priority Queue (Fila de prioridades)</h3>
+          <p>
+            É idêntica a estrutura queue, porem com o adicional que os itens da
+            fila terão peso (prioridade) em relação aos outros itens da fila
+          </p>
+          <a
+            href="https://codepen.io/beaucarnes/pen/QpaQRG?editors=0012"
+            target="_blank"
+            >Queue & Priority Queue</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Binary Tree Search (Pesquisa de Arvore Binária)</h3>
+          <p>
+            Na estrutura de dados tipo BST, temos 3 tipos diferentes de
+            nomenclaturas, o <b>root</b> que é o <b>node</b> principal da
+            estrutura, dele podemos ter nodes filhos e assim sucessivamente, um
+            node que tem nodes filhos é chamado de <b>parent node</b> ja os
+            nodes que não tem nodes filhos, é chamado de <b>leaf</b>, na arvore
+            binaria, cada node poderá apenas ter dois node filhos, com a
+            seguinte regra: o da direita sempre deve ser maior ou igual ao
+            parente node, e o da esquerda sempre menor ou igual o parent node.
+          </p>
+          <p>
+            Com <b>Transversal</b> e <b>Height</b> podemos identificar qual a
+            altura da nossa árvore, se ela está balanceada (tem o mesmo tamanho
+            entre os lados),e ordenar os dados por ordem de tamanho crescente
+            <b>inOrder()</b>, para ordenar os nodes por pelos nodes parents da
+            esquerda para direita temos a <b>preOrder()</b>, e para ordenar os
+            dados de baixo para cima, começando pelos leafs temos o
+            <b>postOrder()</b> que também começa da esquerda para direita, e por
+            ultimo temos o <b>levelOrder()</b> que ordena os dados pelo level da
+            camada da árvore.
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Add</li>
+            <li>FindMin</li>
+            <li>FindMax</li>
+            <li>Find</li>
+            <li>IsPresent</li>
+            <li>IsBalanced</li>
+            <li>FindMinHeight</li>
+            <li>FindMaxHeight</li>
+            <li>InOrder</li>
+            <li>PreOrder</li>
+            <li>PostOrder</li>
+            <li>LevelOrder</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/ryKvEQ?editors=0011"
+            target="_blank"
+            >Binary Search Tree: Traversal & Height</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Hash Table (Tabela Hash)</h3>
+          <p>
+            Tabelas hashes está embutida em quase toda linguagem de programação,
+            é umas estrutura de rápida pesquisa O(1), adição e remoção de dados,
+            pois pesquisamos diretamente o item, sendo assim amplamente
+            utilizada em vários casos, diferente das outras estruturas citadas
+            sendo a maioria O(n) pois fazem busca recursiva.
+          </p>
+          <p>
+            Dentro de uma tabela hash temos a função de hash que embaralha o
+            dado e gera o índice, e este dado é guardado dentro de um storage
+            limitado e de forma aleatória, gerada pela função hash, guardamos a
+            key e o value do dado, ao ser chamado o dado para verificação do seu
+            valor, passamos a key e logo nos retorna o dado pois a tabela sabe
+            exatamente o índice da key informada
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Hash</li>
+            <li>Add</li>
+            <li>Remove</li>
+            <li>Lookup</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/VbYGMb?editors=0012"
+            target="_blank"
+            >Hash Table</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Linked List (Lista Encadeada)</h3>
+          <p>
+            A linked list possui dados sempre apontando para o próximo dado e
+            com o endereço, é completamente interligada, só conseguimos
+            encontrar determinado dado, navegando por toda lista até acha-lo,
+            sendo assim custosa.
+          </p>
+          <p>
+            A lista começa com um dado em head que aponta para o dado seguinte,
+            e termina quando não temos um dado seguinte.
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Size</li>
+            <li>Head</li>
+            <li>Add</li>
+            <li>Remove</li>
+            <li>isEmpty</li>
+            <li>IndexOf</li>
+            <li>ElementAt</li>
+            <li>AddAt</li>
+            <li>RemoveAt</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/ybOvBq?editors=0011"
+            target="_blank"
+            >Linked List</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Trie</h3>
+          <p>
+            É um tipo de arvóre muito utilizada para criação de árvores para
+            dicionários, este tipo de estrutura, cria uma árvore com a palavra
+            inserida, sendo cada letra um node da arvore, e criadas palavras a
+            partir de outras letras/palavras
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Add</li>
+            <li>isWord</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/mmBNBd?editors=0011"
+            target="_blank"
+            >Trie</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Heaps</h3>
+          <p>
+            Heaps (min and max) também são tipos de arvoes, que se auto
+            balanceiam, de acordo com o seu tipo, <b>Max Heap</b> significa que
+            o maior valor sempre será o primeiro o root node, e os menores
+            sempre serão as leafs, em um heap, os valores sempre se concentram
+            do lado esquerdo e a cada valor adicionado o a árvore é balanceada,
+            em uma <b>Min Heap</b>, acontece exatamente a mesma coisa porem ao
+            cóntrario, o menor valor sempre será o root node, e os maiores
+            valores sendo as leafs, também se concentrado do lado esquerdo.
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Insert</li>
+            <li>Remove</li>
+            <li>Sort</li>
+          </ul>
+          <a
+            href="https://codepen.io/beaucarnes/pen/JNvENQ?editors=0010"
+            target="_blank"
+            >Heaps</a
+          >
+        </section>
+        <hr />
+        <section>
+          <h3>Graphs</h3>
+          <p>
+            Os Graphs ou Grafos é um tipo de estrutura muito comum em redes
+            sociais, pois correlaciona os elementos
+          </p>
+          <p>
+            Temos tanto <b>Graphs Directed</b> e <b>Graphs Undirected</b> onde o
+            directed tem direções enter os elementos, ou seja, do ponto a vamos
+            ao ponto b e do b ao c, e não ao contrario, podemos apontar para o
+            elemento e ele apontar de volta, ja o undirected, todos elementos se
+            comunicam entre si. Temos o elemento que chamamos de node e a
+            ligação entre os nodes que chamamos de edge.
+          </p>
+          <p>
+            Podemos reproduzir grafos com matrizes, arrays 2d, onde 0 não temos
+            ligações e 1 temos ligações, sendo representadas tanto como
+            <b>adjacency</b> e <b>incidence</b>, onde adjacency o eixo x e y da
+            matriz sãos os nodes e em incidence o x são os edges e o y os node
+          </p>
+          <h4>Métodos</h4>
+          <ul>
+            <li>Breadth-first search</li>
+          </ul>
+          <a href="https://codepen.io/beaucarnes/pen/XgrXvw?editors=0012"
+            >Graphs</a
+          >
+        </section>
+        <hr />
+        <h3>
+          Estudo baseado no artigo:
+          <a
+            href="https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b/"
+            >10 Common Data Structures Explained with Videos + Exercises</a
+          >
+        </h3>
+      </article>
+    </main>
+  </body>
+</html>
