@@ -13,9 +13,9 @@
 </h3>
 
 <p align="center">
-	<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/SamyrOR/front-end-completo">
-	<img alt="GitHub language count" src="https://img.shields.io/github/repo-size/SamyrOR/front-end-completo">
-	<img  alt="GitHub last commit"  src="https://img.shields.io/github/last-commit/SamyrOR/front-end-completo">
+	<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/SamyrOR/Estudos">
+	<img alt="GitHub language count" src="https://img.shields.io/github/repo-size/SamyrOR/Estudos">
+	<img  alt="GitHub last commit"  src="https://img.shields.io/github/last-commit/SamyrOR/Estudos">
 </p>
 <h4 align="center">
 	🚧 Under construction 🚧
