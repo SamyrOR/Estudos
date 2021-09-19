@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      .child {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+      .child-of-child {
+        width: 0;
+        background-color: purple;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child">
+        <div class="child-of-child"></div>
+      </div>
+      <div class="child">
+        <div class="child-of-child animate"></div>
+      </div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+    <script defer>
+      const parent = document.querySelector(".parent");
+      for (let child of Array.from(parent.children)) {
+        let hasChild = child.children.length != 0;
+        if (hasChild) {
+          if (child.children[0].classList.contains("animate")) {
+            child.children[0].style.width = "100px";
+          }
+          console.log();
+        }
+      }
+    </script>
+  </body>
+</html>
