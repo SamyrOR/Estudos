@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3</title>
+    <style>
+      header {
+        width: 100%;
+        height: 50px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <script>
+      function verifySizeAndPaint() {
+        let windowSize = window.innerWidth;
+        const header = document.getElementsByTagName("header")[0];
+        if (windowSize <= 580) {
+          header.style.backgroundColor = "blue";
+        } else if (windowSize > 580 && windowSize <= 758) {
+          header.style.backgroundColor = "red";
+        } else if (windowSize > 768 && windowSize <= 1024) {
+          header.style.backgroundColor = "green";
+        } else {
+          header.style.backgroundColor = "white";
+        }
+      }
+      verifySizeAndPaint();
+      window.addEventListener("resize", () => {
+        verifySizeAndPaint();
+      });
+    </script>
+  </body>
+</html>
