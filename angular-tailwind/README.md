@@ -1,6 +1,8 @@
 # AngularTailwind
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+Tailwind crash course from [Ricardo Sanches Chanel](https://www.youtube.com/watch?v=1qH3wAtX4So&list=WL&index=64)
+
+And done with angular, by [Setup TailwindCSS in Angular](https://dev.to/angular/setup-tailwindcss-in-angular-the-easy-way-1i5l) tutorial.
 
 ## Development server
 
