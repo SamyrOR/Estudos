@@ -6,6 +6,8 @@
 	<img alt="JS logo" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg' width="auto" height="30">
 	<img alt="SASS logo" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg' width="auto" height="30">
 	<img alt="TypeScript logo" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg' width="auto" height="30">
+	<img alt="Bootstrap" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg' width="auto" height="30">
+	<img alt="Tailwind" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwind/tailwindcss-plain.svg' width="auto" height="30">
 </h1>
 
 <h3 align="center">
