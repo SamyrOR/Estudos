@@ -1,5 +1,3 @@
-
-
 <h1 align="center">
 	<img alt="HTML logo" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg' width="auto" height="30"> 
 	<img alt="CSS logo" src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg' width="auto" height="30">
@@ -28,11 +26,11 @@
 <!--ts-->
 
 - [Table of contents](#table-of-contents)
-  - [💻 About](#-about)
-  - [⚙️ Features](#️-features)
-  - [💡 How it works](#-how-it-works)
-  - [🛠 Tech stack](#-tech-stack)
-  - [💪 How to contribute](#-how-to-contribute)
+	- [💻 About](#-about)
+	- [⚙️ Features](#️-features)
+	- [💡 How it works](#-how-it-works)
+	- [🛠 Tech stack](#-tech-stack)
+	- [💪 How to contribute](#-how-to-contribute)
   <!--te-->
 
 ---
@@ -46,24 +44,27 @@ This repository is to maintain all praticies of styles and algorithms, that i fi
 ## ⚙️ Features
 
 - [x] HTML5
-	- [x] Structure of a html page
-	- [x] Basic and main tags
+
+  - [x] Structure of a html page
+  - [x] Basic and main tags
 
 - [x] CSS
-	 - [x] GRID
-	 - [x] Flexbox
-	 - [x] Border radius
-	
- - [x] JavaScritp
- - [x] TypeScript
- 
- 
+  - [x] GRID
+  - [x] Flexbox
+  - [x] Border radius
+- [x] JavaScript
+- [x] TypeScript
+- [x] Bootstrap
+  - [x] Theming
+    - [x] Custom colors
+    - [x] Create new theme colors
+- [x] Tailwind
+  - [x] Integration with Angular
+  - [x] Custom class with @apply
 
 ---
 
 ## 💡 How it works
-
-
 
 Each folder with the tool name have a `index.html` who contains the documented study, and some of then have exercicies folders.
 
@@ -78,10 +79,9 @@ The following tools were used in the construction of the project:
 - **[Sass: Syntactically Awesome Style Sheets (sass-lang.com)](https://sass-lang.com/)**
 - **[JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
 - **[TypeScript: JavaScript With Syntax For Types. (typescriptlang.org)](https://www.typescriptlang.org/)**
-
-
-
----
+- **[Bootstrap ](https://getbootstrap.com/)**
+- **[Tailwind CSS)](https://tailwindcss.com/)**
+- ***
 
 ## 💪 How to contribute
 
