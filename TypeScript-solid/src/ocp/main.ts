@@ -8,19 +8,9 @@ import { ShoppingCart } from "./classes/shopping-cart";
 import { Order } from "./classes/order";
 import { Messaging } from "./services/mensaging";
 import { Persistency } from "./services/persistency";
-import {
-  EnterpriseCustomer,
-  IndividualCustomer,
-} from "../isp/classes/customer";
 
 const shoppingCart = new ShoppingCart(new FiftyPercentDiscount());
-const order = new Order(
-  shoppingCart,
-  new Messaging(),
-  new Persistency(),
-  new EnterpriseCustomer("Lojas mil", "000015465464")
-);
-// new IndividualCustomer("Samyr", "Ribeiro", "60006865364")
+const order = new Order(shoppingCart, new Messaging(), new Persistency());
 
 shoppingCart.addItem(new Product("Camisa", 49.9));
 shoppingCart.addItem(new Product("Caderno", 9.9));
