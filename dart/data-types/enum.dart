@@ -2,6 +2,9 @@ enum UserType { admin, customer, employer, driver }
 
 void main() {
   final userType = UserType.admin;
+  final enhancedUserType = EnhancedUserType.admin;
+
+  print("É uma pessoa ${enhancedUserType.value} com id ${enhancedUserType.id}");
 
   if (userType == UserType.admin) {
     print('É uma pessoa administradora');
@@ -28,4 +31,14 @@ void main() {
       print("Não é nada");
       break;
   }
+}
+
+enum EnhancedUserType {
+  admin(1, "admin"),
+  customer(1, "admin"),
+  employee(1, "admin");
+
+  final String value;
+  final int id;
+  const EnhancedUserType(this.id, this.value);
 }
