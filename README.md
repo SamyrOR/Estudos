@@ -28,10 +28,12 @@
 - [Table of contents](#table-of-contents)
 	- [💻 About](#-about)
 	- [⚙️ Features](#️-features)
+		- [Web](#web)
+		- [Mobile](#mobile)
+		- [Languages](#languages)
 	- [💡 How it works](#-how-it-works)
 	- [🛠 Tech stack](#-tech-stack)
 	- [💪 How to contribute](#-how-to-contribute)
-  <!--te-->
 
 ---
 
@@ -43,24 +45,63 @@ This repository is to maintain all praticies of styles and algorithms, that i fi
 
 ## ⚙️ Features
 
-- [x] HTML5
+### Web
 
-  - [x] Structure of a html page
-  - [x] Basic and main tags
+-   [x] HTML5
+    -   [x] Structure of a html page
+    -   [x] Basic and main tags
+-   [x] CSS
+    -   [x] GRID
+    -   [x] Flexbox
+    -   [x] Border radius
+-   [x] JavaScript
+-   [x] TypeScript
+-   [x] Bootstrap
+    -   [x] Theming
+        -   [x] Custom colors
+        -   [x] Create new theme colors
+-   [x] Tailwind
+    -   [x] Integration with Angular
+    -   [x] Custom class with @apply
 
-- [x] CSS
-  - [x] GRID
-  - [x] Flexbox
-  - [x] Border radius
-- [x] JavaScript
-- [x] TypeScript
-- [x] Bootstrap
-  - [x] Theming
-    - [x] Custom colors
-    - [x] Create new theme colors
-- [x] Tailwind
-  - [x] Integration with Angular
-  - [x] Custom class with @apply
+### Mobile
+
+-   [x] Ionic
+    -   [x] Simple Budget Planner
+    -   [x] Ionic Crash Course Challenge
+
+### Languages
+
+-   [x] Dart
+    -   [x] Data types
+    -   [x] Functions
+    -   [x] OOP
+-   [x] C
+    -   [x] Compile and Run a C programming
+    -   [x] Variables
+        -   [x] Data types
+        -   [x] Format Specifiers
+        -   [x] Constants
+        -   [x] Arithmetic operators
+        -   [x] Augmented assignment operators
+    -   [x] Math Functions
+    -   [x] If Statements
+    -   [x] Switch Statements
+    -   [x] Logical Operators
+    -   [x] Arguments
+    -   [x] Functions
+    -   [x] String Functions
+    -   [x] Loops
+        -   [x] For
+        -   [x] do While
+        -   [x] Nested
+    -   [x] Arrays
+        -   [x] 2d Arrays
+    -   [x] Structs
+    -   [x] Typdef
+    -   [x] Enums
+-   [x] Assembly
+    -   [x] Hello World
 
 ---
 
@@ -74,14 +115,14 @@ Each folder with the tool name have a `index.html` who contains the documented s
 
 The following tools were used in the construction of the project:
 
-- **HTML**
-- **CSS**
-- **[Sass: Syntactically Awesome Style Sheets (sass-lang.com)](https://sass-lang.com/)**
-- **[JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
-- **[TypeScript: JavaScript With Syntax For Types. (typescriptlang.org)](https://www.typescriptlang.org/)**
-- **[Bootstrap ](https://getbootstrap.com/)**
-- **[Tailwind CSS)](https://tailwindcss.com/)**
-- ***
+-   **HTML**
+-   **CSS**
+-   **[Sass: Syntactically Awesome Style Sheets (sass-lang.com)](https://sass-lang.com/)**
+-   **[JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
+-   **[TypeScript: JavaScript With Syntax For Types. (typescriptlang.org)](https://www.typescriptlang.org/)**
+-   **[Bootstrap ](https://getbootstrap.com/)**
+-   **[Tailwind CSS)](https://tailwindcss.com/)**
+-   ***
 
 ## 💪 How to contribute
 
@@ -89,7 +130,7 @@ The following tools were used in the construction of the project:
 2. Create a new branch with your changes: `git checkout -b my-feature`
 3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
 4. Submit your changes: `git push origin my-feature`
-   > If you have any suggestion, tip or compliment, please leave a issue
+    > If you have any suggestion, tip or compliment, please leave a issue
 
 ---
 
