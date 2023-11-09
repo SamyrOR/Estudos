@@ -14,14 +14,14 @@ Enum.chunk_every([1,2,3,4,5,6], 2); #[[1,2], [3,4], [5,6]]
 Enum.chunk_by(["one", "two", "three", "four", "five", "six"], fn(element) -> String.length(element) end);#[["one", "two"], ["three"], ["four", "five"] ["six"]]
 
 #map_every/3, make the function work every n time
-Enum.map_every([1, 2, 3, 4, 5 ,6, 7, 8], 3, fn -> el + 1000 end); #[1001, 2, 3, 1004, 5, 6, 1007, 8]
+Enum.map_every([1, 2, 3, 4, 5 ,6, 7, 8], 3, fn(el) -> el + 1000 end); #[1001, 2, 3, 1004, 5, 6, 1007, 8]
 
 #each/2 execute the function in each element without creating a new collection (similar to forEach in JS)
 # return the atom at the end:ok
 Enum.each(["one", "two", "three"], fn(element) -> IO.puts(element) end)
 
 #map/2 iterate in each element, and generate a new collection at the end
-Enum.map([0, 1, 2, 3], fn(element) -> element -1 end) #[-1, 0, 1, 2]
+Enum.map([0, 1, 2, 3], fn(element) -> element - 1 end) #[-1, 0, 1, 2]
 
 #min/1 return the minor value
 Enum.min([5, 3, 0, -1]) # -1
@@ -53,7 +53,7 @@ Enum.uniq([1,2,3,2,1,1,1,1,1,]) #[1,2,3]
 Enum.uniq([%{x: 1, y: 1}, %{x: 2, y: 1}, %{x: 3, y: 3}, fn coord -> coord.y end])#[%{x: 1, y: 1}, %{x: 3, y: 3}]
 
 #Example with anonymous function
-Enum.map([1,2,3], fn number -> number +3 end);
+Enum.map([1,2,3], fn number -> number + 3 end);
 
 #Example with capture operator &, who transforms a anonymous function, ou capture another function hiding this name
 Enum.map([1,2,3], &(&1 + 3))
@@ -64,10 +64,10 @@ Enum.map([1,2,3], plus_three)
 
 #Capture with a named function
 defmodule Adding do
-    def plus_three(number), do: number +3
+    def plus_three(number), do: number + 3
 end
 #Without anonymous function without the capture operator
-Enum.map([1,2,3], fn number -> Adding.plus_three() end)
+Enum.map([1,2,3], fn number -> Adding.plus_three(number) end)
 #With the capture operator and capture variable
 Enum.map([1,2,3], &Adding.plus_three(&1))
 #With the capture operator skipping the variable (best)
