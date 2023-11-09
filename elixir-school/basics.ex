@@ -23,15 +23,15 @@ is_atom(MyApp.MyModule)
 
 #Strings
 hello = "Hello";
-"hello\nworld"
+IO.puts("hello\nworld")
 
 #String Interpolation
 name = "Samyr";
-"Hello #{name}";
+IO.puts("Hello #{name}");
 
 #String Concatenation
 name = "Samyr";
-"Hello " <> name;
+IO.puts("Hello " <> name);
 
 #Basic Operations
 #Arithmetic
@@ -39,8 +39,8 @@ name = "Samyr";
 2-1;
 2*5;
 10/5;
-div(10,5);
-rem(10,3); # equivalent to % in JS
+IO.puts(div(10,5));
+IO.puts(rem(10,3)); # equivalent to % in JS
 
 #Logical operators
 -20 || true;
@@ -63,7 +63,7 @@ not false
 2 === 2.0 #false
 
 #Any to types can be compared
-number < atom < reference < function < port < pid < tuple < map < list < bitstring
+# number < atom < reference < function < port < pid < tuple < map < list < bitstring
 #Example
-:hello > 99; #true
-{:hello, :world} > [1,2,3]; #false
+IO.puts(:hello > 99); #true
+IO.puts({:hello, :world} > [1,2,3]); #false
