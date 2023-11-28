@@ -22,7 +22,7 @@ defmodule Executables04 do
   defp parse_args(args) do
     {opts, word, _} = args |> OptionParser.parse(switches: [upcase: :boolean])
 
-    {opts, List.to_string(word)}
+    {opts, Enum.join(word, " ")}
   end
 
   defp response({opts, word}) do
