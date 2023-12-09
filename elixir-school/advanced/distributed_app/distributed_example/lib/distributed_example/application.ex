@@ -17,12 +17,34 @@ defmodule DistributedExample.Application do
     ]
 
     children = [
-      {Cache, []},
+      {CacheSupervisor, []},
       {Cluster.Supervisor, [topologies, [name: DistributedExample.ClusterSupervisor]]},
       {Bandit, plug: DistributedExample.Router, scheme: :http, options: bandit_options}
     ]
 
     opts = [strategy: :one_for_one, name: DistributedExample.Supervisor]
-    Supervisor.start_link(children, opts)
+    started = Supervisor.start_link(children, opts)
+    :timer.sleep(1000)
+    CacheSupervisor.start()
+
+    spawn(fn ->
+      :net_kernel.monitor_nodes(true, %{nodedown_reason: true})
+      loop()
+    end)
+
+    started
+  end
+
+  def loop() do
+    receive do
+      {:nodedown, _, _} ->
+        :timer.sleep(:rand.uniform(1000))
+        if !is_pid(:global.whereis_name(Cache)), do: CacheSupervisor.start()
+
+      _ ->
+        nil
+    end
+
+    loop()
   end
 end

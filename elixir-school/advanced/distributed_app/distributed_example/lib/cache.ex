@@ -1,12 +1,26 @@
 defmodule Cache do
   use GenServer
+  require Logger
 
   def init(_) do
     {:ok, %{node: node()}}
   end
 
   def start_link(_) do
-    GenServer.start_link(__MODULE__, [], name: __MODULE__)
+    GenServer.start_link(__MODULE__, [], name: {:global, __MODULE__})
+    |> case do
+      {:ok, pid} ->
+        spawn_node = __MODULE__.get()[:node]
+        Logger.info("Stated cache at node: 
+          #{spawn_node}")
+        {:ok, pid}
+
+      {:error, _} ->
+        spawn_node = __MODULE__.get()[:node]
+        Logger.warning("Cache already initialized at node: 
+          #{spawn_node}")
+        {:ok, nil}
+    end
   end
 
   def handle_call(:get, _from, state) do
@@ -15,7 +29,6 @@ defmodule Cache do
 
   def handle_cast({:put, key, value}, state) do
     state = Map.put(state, key, value)
-    GenServer.cast(__MODULE__, :sync)
     {:noreply, state}
   end
 
@@ -28,10 +41,10 @@ defmodule Cache do
     {:noreply, state}
   end
 
-  def put(key, value), do: GenServer.cast(__MODULE__, {:put, key, value})
-  def put_state(state), do: GenServer.cast(__MODULE__, {:put_state, state})
+  def put(key, value), do: GenServer.cast({:global, __MODULE__}, {:put, key, value})
+  def put_state(state), do: GenServer.cast({:global, __MODULE__}, {:put_state, state})
 
-  def get, do: GenServer.call(__MODULE__, :get)
+  def get, do: GenServer.call({:global, __MODULE__}, :get)
 
-  def sync, do: GenServer.cast(__MODULE__, :sync)
+  def sync, do: GenServer.cast({:global, __MODULE__}, :sync)
 end
